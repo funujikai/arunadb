@@ -6,16 +6,16 @@ import (
 	"strings"
 
 	"github.com/funujikai/arunadb/koneksi"
-	"github.com/samonzeweb/arunadb/dberror"
-	// "github.com/samonzeweb/godb/dbreflect"
+	"github.com/funujikai/arunadb/dberror"
+	"github.com/samonzeweb/godb/dbreflect"
 
 	_ "github.com/denisenkom/go-mssqldb"
 )
 
-// init registers types of mssql package corresponding to fields values
-// func init() {
-// 	dbreflect.RegisterScannableStruct(Rowversion{})
-// }
+init registers types of mssql package corresponding to fields values
+func init() {
+	dbreflect.RegisterScannableStruct(Rowversion{})
+}
 
 type MSSQL struct{}
 
